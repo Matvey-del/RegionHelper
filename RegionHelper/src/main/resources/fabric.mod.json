@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "regionhelper",
+  "version": "${version}",
+  "name": "Region Helper",
+  "description": "Client-side visualization of square region boundaries based on held or recently placed marker blocks.",
+  "authors": ["RegionHelper"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["ru.regionhelper.RegionHelperClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

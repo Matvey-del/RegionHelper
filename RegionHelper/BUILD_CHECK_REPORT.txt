@@ -1,0 +1,24 @@
+REGION HELPER BUILD CHECK REPORT
+Date: 2026-11-04
+
+PASS:
+- ZIP extracted and project file layout inspected.
+- Supplied gradle-wrapper.jar is readable and contains a bootstrap main class.
+- Wrapper bootstrap was executed; it read gradle-wrapper.properties and began
+  downloading the configured Gradle distribution.
+- Gradle distribution checksum property is present.
+- Build scripts use the same Gradle 8.12.1 distribution.
+- Java compilation is configured for Java 21 / release 21.
+- Fabric/Minecraft dependency coordinates are centralized in gradle.properties.
+- Windows build.bat selects JDK 21.0.12 at the requested default path when present.
+
+BLOCKED / NOT VERIFIED:
+- Network DNS in the preparation environment cannot resolve services.gradle.org.
+- Gradle distribution and Fabric/Minecraft dependencies could not be downloaded.
+- Therefore Gradle configuration evaluation, Java source compilation, remapping,
+  and final mod JAR production could not be completed here.
+- No claim of a successful full build is made.
+
+Next verification on Windows:
+  build.bat > build.log 2>&1
+Then check build/libs/region-helper-1.0.0.jar.
